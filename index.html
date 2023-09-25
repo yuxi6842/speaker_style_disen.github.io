@@ -1,154 +1,469 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--  <head>-->
 <!--    <meta charset="UTF-8">-->
-<!--    <title>Title</title>-->
-<!--</head>-->
-<!--<body>-->
+<!--    <title>YourTTS</title>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">-->
+<!--    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+<!--    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">-->
+<!--    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">-->
+<!--    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <section id="page-header" class="page-header">-->
+<!--        <div id="bg-header"></div>-->
+<!--        <canvas id="demo-canvas"></canvas>-->
+<!--        <div class="main-title">-->
+<!--          <h1 class="project-name"><span><a href="index.html">YourTTS</a></span></h1>-->
+<!--          &lt;!&ndash; <h2 class="project-tagline">Sentence Boundary Detection using Deep Learning</h2> &ndash;&gt;-->
+<!--          <h2 class="project-tagline">Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone</h2>-->
+          <!-- <a href="https://github.com/mtreviso/deepbond" class="btn">Ver no GitHub</a> -->
+           <!-- <div class="dropdown">
+             <!-- <a href="projeto.html" class="btn">O Projeto</a>
+            <div class="dropdown-content">
+              <a href="projeto.html#introducao">Introdução</a>
+              <a href="projeto.html#hipoteses">Hipóteses</a>
+              <a href="projeto.html#objetivos">Objetivos</a>
+              <a href="projeto.html#metodologia">Metodologia</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="ferramenta.html" class="btn">A Ferramenta</a>
+            <div class="dropdown-content">
+              <a href="ferramenta.html#instalacao">Como instalar</a>
+              <a href="ferramenta.html#uso">Como usar</a>
+              <a href="ferramenta.html#treinamento">Como treinar um modelo</a>
+            </div>
+          </div>
 
-<!--</body>-->
-<!--</html>-->
+          <a href="recursos.html" class="btn">Recursos</a>
+          <a href="pesquisadores.html" class="btn">Pesquisadores</a>
+          <a href="publicacoes.html" class="btn">Publicações</a>
+          <a href="contato.html" class="btn">Contato</a>-->
 
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Speaker and style disentanglement of speech based on contrastive predictive coding supported factorized variational autoencoder</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
-		<!-- Wrapper -->
-			<div id="wrapper">
+        </div>
+    </section>
 
-				<!-- Header -->
-					<header id="header">
+    <section class="main-content">
 
-					</header>
+<!--      <center>-->
+<!--        <a href="https://github.com/Edresson/YourTTS/" class="btn2">• GitHub •</a>-->
+<!--       <a href="https://arxiv.org/abs/2112.02418" class="btn2">• Paper on arXiv •</a></li>-->
+<!--       <a href="https://github.com/Edresson/YourTTS/#colab-demos" class="btn2">• Colab demos •</a></li>-->
 
-				<!-- Menu -->
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1><font style="font-variant: small-caps"></font>Speaker and style disentanglement of speech based on contrastive predictive coding supported factorized variational autoencoder
-<!--                                - <font color = #87CEEB>Audio Demo</font></h1>-->
-							<font size = 5><p><i> Yuying Xie, Michael Kuhlmann, Frederik Rautenberg, Zheng-Hua Tan, Reinhold Haeb-Umbach</i></p></font>
-							<p></p>
-							<!--<a href="#source" class="button fit">Source Code</a>-->
-<!--							<a href="#paper" class="button fit">Code</a>-->
-<!--							<a href="#traditional" class="button fit">Traditional voice conversion</a>-->
-<!--							<a href="#zero-shot" class="button fit">Zero-shot voice conversion</a>-->
-							<br></br><br></br>
-							<!-- Text -->
-<!--							<section>-->
-<!--								<a name="code"></a>-->
-<!--								<h2><font size = 5 color= #58c3c2>Code</font></h2>-->
-<!--								<p>Our code is released <a href="https://github.com/auspicious3000/autovc">here</a>.-->
-							</section>
-							    <section>
-							    <a name="audio demos based on VOiCES"></a>
-							    	<h2><font size = 5 color= #87CEEB>Audio Demos Based on TIMIT</font></h2>
-<!--							    	<p>(Section 5.2 in the paper)</p>-->
-<!--							    	<p>Traditional many-to-many conversion performs voice conversion from and to speakers that are present in the training set. Four systems are implmented:</p>-->
-							    	<ul class="12u 12u$(medium)">
-										<li><b><font size = 4 style="font-variant: small-caps">proposed</font></b> - <font size=4>the proposed conversion algorithm</font></li>
-										<li><b><font  size = 4 style="font-variant: small-caps">FHVAE</font></b> - <font size=4> the original FHVAE results</font></li>
-<!--										<li><b>StarGAN-VC</b> - a voice conversion system that adopts the StarGAN paradigm.</li>-->
-<!--										<li><b>Chou et. al.</b> - a voice conversion system combining autoencoder with GAN and speaker classifier.</li>-->
-									</ul>
-<!--									<p>Below are a few demo audios.</p>-->
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th><font color= #87CEEB>Source Speaker / Speech</font></th>
-													<th><font color= #87CEEB>Target Speaker / Speech</font></th>
-													<th><font color= #87CEEB>Conversion</font></th>
-													<th></th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td rowspan="4">MWEW0_SI1361 <audio controls=""><source src="published%20demos/pair1_M2M/MWEW0_SI1361.wav" /><embed height="50" src="published%20demos/pair1_M2M/MWEW0_SI1361.wav" width="100"></embed></audio></td>
-													<td rowspan="4">MTLS0_SI1370 <audio controls=""><source src="published%20demos/pair1_M2M/MTLS0_SI1370.wav" /><embed height="50" src="published%20demos/pair1_M2M/MTLS0_SI1370.wav" width="100"></embed></audio></td>
-													<td><font style="font-variant: small-caps">Proposed</font></td>
-													<td><audio controls=""><source src="published%20demos/pair1_M2M/MWEW0_SI1361_modto_MTLS0_SI1370_pro.wav" /><embed height="50" src="published%20demos/pair1_M2M/MWEW0_SI1361_modto_MTLS0_SI1370_pro.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-												<tr>
-													<td><font style="font-variant: small-caps">FHVAE</font></td>
-													<td><audio controls=""><source src="published%20demos/pair1_M2M/MWEW0_SI1361_modto_MTLS0_SI1370_orig.wav" /><embed height="50" src="published%20demos/pair1_M2M/MWEW0_SI1361_modto_MTLS0_SI1370_orig.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-											</tbody>
-											<tbody>
-												<tr>
-													<td rowspan="4">MJMP0_SI1535 <audio controls=""><source src="published%20demos/pair2_M2F/MJMP0_SI1535.wav" /><embed height="50" src="published%20demos/pair2_M2F/MJMP0_SI1535.wav" width="100"></embed></audio></td>
-													<td rowspan="4">FMGD0_SI1564 <audio controls=""><source src="published%20demos/pair2_M2F/FMGD0_SI1564.wav" /><embed height="50" src="published%20demos/pair2_M2F/FMGD0_SI1564.wav" width="100"></embed></audio></td>
-													<td><font style="font-variant: small-caps">Proposed</font></td>
-													<td><audio controls=""><source src="published%20demos/pair2_M2F/MJMP0_SI1535_modto_FMGD0_SI1564_pro.wav" /><embed height="50" src="published%20demos/pair2_M2F/MJMP0_SI1535_modto_FMGD0_SI1564_pro.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-												<tr>
-													<td><font style="font-variant: small-caps">FHVAE</font></td>
-													<td><audio controls=""><source src="published%20demos/pair2_M2F/MJMP0_SI1535_modto_FMGD0_SI1564_orig.wav" /><embed height="50" src="published%20demos/pair2_M2F/MJMP0_SI1535_modto_FMGD0_SI1564_orig.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-
-											</tbody>
-
-											<tbody>
-												<tr>
-													<td rowspan="4">FDHC0_SI1559 <audio controls=""><source src="published%20demos/pair3_F2F/FDHC0_SI1559.wav" /><embed height="50" src="published%20demos/pair3_F2F/FDHC0_SI1559.wav" width="100"></embed></audio></td>
-													<td rowspan="4">FNLP0_SI1308 <audio controls=""><source src="published%20demos/pair3_F2F/FNLP0_SI1308.wav" /><embed height="50" src="published%20demos/pair3_F2F/FNLP0_SI1308.wav" width="100"></embed></audio></td>
-													<td><font style="font-variant: small-caps">Proposed</font></td>
-													<td><audio controls=""><source src="published%20demos/pair3_F2F/FDHC0_SI1559_modto_FNLP0_SI1308_pro.wav" /><embed height="50" src="published%20demos/pair3_F2F/FDHC0_SI1559_modto_FNLP0_SI1308_pro.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-												<tr>
-													<td><font style="font-variant: small-caps">FHVAE</font></td>
-													<td><audio controls=""><source src="published%20demos/pair3_F2F/FDHC0_SI1559_modto_FNLP0_SI1308_orig.wav" /><embed height="50" src="published%20demos/pair3_F2F/FDHC0_SI1559_modto_FNLP0_SI1308_orig.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-
-											</tbody>
-
-											<tbody>
-												<tr>
-													<td rowspan="4">FPAS0_SI1272 <audio controls=""><source src="published%20demos/pair4_F2M/FPAS0_SI1272.wav" /><embed height="50" src="published%20demos/pair4_F2M/FPAS0_SI1272.wav" width="100"></embed></audio></td>
-													<td rowspan="4">MTAS1_SI1473 <audio controls=""><source src="published%20demos/pair4_F2M/MTAS1_SI1473.wav" /><embed height="50" src="published%20demos/pair4_F2M/MTAS1_SI1473.wav" width="100"></embed></audio></td>
-													<td><font style="font-variant: small-caps">Proposed</font></td>
-													<td><audio controls=""><source src="published%20demos/pair4_F2M/FPAS0_SI1272_modto_MTAS1_SI1473_pro.wav" /><embed height="50" src="published%20demos/pair4_F2M/FPAS0_SI1272_modto_MTAS1_SI1473_pro.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-												<tr>
-													<td><font style="font-variant: small-caps">FHVAE</font></td>
-													<td><audio controls=""><source src="published%20demos/pair4_F2M/FPAS0_SI1272_modto_MTAS1_SI1473_orig.wav" /><embed height="50" src="published%20demos/pair4_F2M/FPAS0_SI1272_modto_MTAS1_SI1473_orig.wav" width="100"></embed></audio>
-													</td>
-												</tr>
-
-											</tbody>
+       <!-- <a href="tutorial.html" class="btn2">• Tutorial •</a>  -->
+       <!-- <a href="http://fw.nilc.icmc.usp.br:23680/" target="_blank" class="btn2">• Interface Online •</a> -->
+      </center>
 
 
-		<h1>This site has been visited <span id="visits"></span> times.</h1>
 
 
-			</div>
+        <br>
+        <br>
+        <div style="text-align: center;">
+          <h1>Speaker and style disentanglement of speech based on contrastive predictive coding supported factorized variational autoencoder</h1>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+            <p> <b>Yuying Xie, Michael Kuhlmann, Frederik Rautenberg, Zheng-Hua Tan, Reinhold Haeb-Umbach</b></p>
 
-	</body>
+
+        </div>
+
+
+        <h2>Abstract:</h2>
+
+      <p>
+
+        Speech signals encompass various information across multiple levels including content, speaker, and style. Disentanglement of these information, although challenging, is important for applications such as voice conversion. The contrastive predictive coding supported factorized variational autoencoder achieves an unsupervised disentanglement of a speech signal into speaker and content information by assuming speaker information to be temporally more stable than content-induced variations. Thus, a single utterance-level embedding vector is used to represent speaker information. This utterance-level feature, however, may consist of not only speaker information but also other temporally stable non-content information such as environment or emotion, which we call style. In this work, we propose a method to further disentangle non-content features into distinct speaker and style features, notably by leveraging readily accessible and well-defined speaker class labels without the necessity for style labels. Experimental results validate the proposed method effectiveness on extracting disentangled features, thereby facilitating speaker, style, or combined speaker-style conversion.
+
+	  </p>
+
+<!--      <h3>System architecture:</h3>-->
+
+<!--       <center><p><img src="resources/yourtts.png" width="560"></p></center>-->
+
+      <h2>Note:</h2>
+      The following conversion may contains three original utterance from VOiCES dataset or LibriSpeech test set, we use <strong>'content utterance'</strong>, <strong>'speaker utterance'</strong> and <strong>'style utterance'</strong> to represent.
+
+      <br>
+
+      <br> <strong>Content utterance:</strong> the utterance we hope the conversion results have the same content with.
+
+      <br> <strong>Speaker utterance:</strong> we hope this utterance only provides speaker information to the conversion result.
+
+      <br> <strong>Style utterance:</strong> the utterance only influences the style of the conversion result.
+
+
+      <h2>Clean Voice Conversion</h2>
+
+      <p>The following demos are clean voice conversion.
+        Content utterances, speaker utterances and style utterances are all from <strong>LibriSpeech test set</strong>.
+        Content utterances and style utterances are the same, and only speaker utterances are changed during conversion.</p>
+
+<table border="1">
+  <tr><td></td><td>content utterance</td><td>speaker utterance</td><td>style utterance</td><td>conversion result</td></tr>
+
+
+<tr>
+  <td>label</td>
+	<td>2300-131720-0028</td><td>1089-134686-0010</td><td>2300-131720-0028</td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/1/source-2300-131720-0028.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/1/source-2300-131720-0028.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/1/target_speaker-1089-134686-0010.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/1/target_speaker-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/1/source-2300-131720-0028.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/1/source-2300-131720-0028.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/1/convert.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/1/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td>2300-131720-0028</td><td>1188-133604-0036</td><td>2300-131720-0028</td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/2/source-2300-131720-0028.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/2/source-2300-131720-0028.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/2/target_speaker-1188-133604-0036.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/2/target_speaker-1188-133604-0036.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/2/source-2300-131720-0028.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/2/source-2300-131720-0028.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/2/convert.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/2/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td>1221-135767-0013</td><td>1320-122617-0008</td><td>1221-135767-0013</td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/3/source-1221-135767-0013.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/3/source-1221-135767-0013.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/3/target_speaker-1320-122617-0008.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/3/target_speaker-1320-122617-0008.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/3/source-1221-135767-0013.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/3/source-1221-135767-0013.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/3/convert.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/3/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td>1580-141083-0016</td><td>1995-1826-0011</td><td>1580-141083-0016</td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/4/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/4/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/4/target_speaker-1995-1826-0011.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/4/target_speaker-1995-1826-0011.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/4/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/4/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/4/convert.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/4/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td>1580-141083-0016</td><td>237-134500-0041</td><td>1580-141083-0016</td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/5/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/5/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/5/target_speaker-237-134500-0041.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/5/target_speaker-237-134500-0041.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/5/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/5/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/5/convert.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/5/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td>1580-141083-0016</td><td>2830-3979-0006</td><td>1580-141083-0016</td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/6/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/6/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/6/target_speaker-2830-3979-0006.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/6/target_speaker-2830-3979-0006.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/6/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/6/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/6/convert.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/6/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td>1580-141083-0016</td><td>2961-960-0006</td><td>1580-141083-0016</td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/7/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/7/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/7/target_speaker-2961-960-0006.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/7/target_speaker-2961-960-0006.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/7/source-1580-141083-0016.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/7/source-1580-141083-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/clean_voice_conversion/7/convert.wav" /><embed height="50" src="audio_demos/clean_voice_conversion/7/convert.wav" width="100"></embed></audio></td>
+</tr>
+</table>
+
+        <h2>Only Change Style</h2>
+        <p>The following demos only change style embeddings.<br>
+        Content utterances, speaker utterances are the same, from <strong>VOiCES_devkit test set</strong>.<br>
+        Style utterances are from <strong>LibriSpeech test set</strong>.<br>
+        Besides, 'clean content utterance' in below are the clean utterances without reverberation. </p>
+
+
+<table border="2">
+  <tr><td></td><td>content utterance</td><td>speaker utterance</td><td>clean content utterance</td><td>style utterance</td><td>conversion result</td></tr>
+
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030 </td><td> Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030 </td><td> Lab41-SRI-VOiCES-src-sp8855-ch302395-sg0007 </td><td> 1089-134686-0010 </td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/1/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030.wav" /><embed height="50" src="audio_demos/style_conversion/1/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/1/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030.wav" /><embed height="50" src="audio_demos/style_conversion/1/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/1/CLEAN_Lab41-SRI-VOiCES-src-sp8855-ch302395-sg0007.wav" /><embed height="50" src="audio_demos/style_conversion/1/CLEAN_Lab41-SRI-VOiCES-src-sp8855-ch302395-sg0007.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/1/SE_Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030.wav" /><embed height="50" src="audio_demos/style_conversion/1/SE_Lab41-SRI-VOiCES-rm4-none-sp8855-ch302395-sg0007-mc05-stu-far-dg030.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140 </td><td>Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140</td><td>Lab41-SRI-VOiCES-src-sp8468-ch294887-sg0002</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/2/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140.wav" /><embed height="50" src="audio_demos/style_conversion/2/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/2/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140.wav" /><embed height="50" src="audio_demos/style_conversion/2/NOISY_Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/2/CLEAN_Lab41-SRI-VOiCES-src-sp8468-ch294887-sg0002.wav" /><embed height="50" src="audio_demos/style_conversion/2/CLEAN_Lab41-SRI-VOiCES-src-sp8468-ch294887-sg0002.wav.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/2/SE_Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140.wav" /><embed height="50" src="audio_demos/style_conversion/2/SE_Lab41-SRI-VOiCES-rm4-none-sp8468-ch294887-sg0002-mc01-stu-clo-dg140.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120 </td><td>Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120</td><td>Lab41-SRI-VOiCES-src-sp3816-ch290923-sg0003</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/3/NOISY_Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120.wav" /><embed height="50" src="audio_demos/style_conversion/3/NOISY_Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/3/NOISY_Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120.wav" /><embed height="50" src="audio_demos/style_conversion/3/NOISY_Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/3/CLEAN_Lab41-SRI-VOiCES-src-sp3816-ch290923-sg0003.wav" /><embed height="50" src="audio_demos/style_conversion/3/CLEAN_Lab41-SRI-VOiCES-src-sp3816-ch290923-sg0003.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/3/SE_Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120.wav" /><embed height="50" src="audio_demos/style_conversion/3/SE_Lab41-SRI-VOiCES-rm4-none-sp3816-ch290923-sg0003-mc05-stu-far-dg120.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050 </td><td>Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050</td><td>Lab41-SRI-VOiCES-src-sp0688-ch015446-sg0034</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/4/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050.wav" /><embed height="50" src="audio_demos/style_conversion/4/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/4/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050.wav" /><embed height="50" src="audio_demos/style_conversion/4/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/4/CLEAN_Lab41-SRI-VOiCES-src-sp0688-ch015446-sg0034.wav" /><embed height="50" src="audio_demos/style_conversion/4/CLEAN_Lab41-SRI-VOiCES-src-sp0688-ch015446-sg0034.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/4/SE_Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050.wav" /><embed height="50" src="audio_demos/style_conversion/4/SE_Lab41-SRI-VOiCES-rm3-none-sp0688-ch015446-sg0034-mc01-stu-clo-dg050.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080 </td><td>Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080</td><td>Lab41-SRI-VOiCES-src-sp0667-ch105002-sg0020</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/5/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/style_conversion/5/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/5/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/style_conversion/5/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/5/CLEAN_Lab41-SRI-VOiCES-src-sp0667-ch105002-sg0020.wav" /><embed height="50" src="audio_demos/style_conversion/5/CLEAN_Lab41-SRI-VOiCES-src-sp0667-ch105002-sg0020.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/5/SE_Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/style_conversion/5/SE_Lab41-SRI-VOiCES-rm3-none-sp0667-ch105002-sg0020-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080 </td><td>Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080</td><td>Lab41-SRI-VOiCES-src-sp0373-ch130977-sg0028</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/6/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/style_conversion/6/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/6/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/style_conversion/6/NOISY_Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/6/CLEAN_Lab41-SRI-VOiCES-src-sp0373-ch130977-sg0028.wav" /><embed height="50" src="audio_demos/style_conversion/6/CLEAN_Lab41-SRI-VOiCES-src-sp0373-ch130977-sg0028.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/6/SE_Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/style_conversion/6/SE_Lab41-SRI-VOiCES-rm3-none-sp0373-ch130977-sg0028-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010 </td><td>Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010</td><td>Lab41-SRI-VOiCES-src-sp6499-ch057667-sg0021</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/7/NOISY_Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010.wav" /><embed height="50" src="audio_demos/style_conversion/7/NOISY_Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/7/NOISY_Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010.wav" /><embed height="50" src="audio_demos/style_conversion/7/NOISY_Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/7/CLEAN_Lab41-SRI-VOiCES-src-sp6499-ch057667-sg0021.wav" /><embed height="50" src="audio_demos/style_conversion/7/CLEAN_Lab41-SRI-VOiCES-src-sp6499-ch057667-sg0021.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/7/SE_Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010.wav" /><embed height="50" src="audio_demos/style_conversion/7/SE_Lab41-SRI-VOiCES-rm2-none-sp6499-ch057667-sg0021-mc01-stu-clo-dg010.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090 </td><td>Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090</td><td>Lab41-SRI-VOiCES-src-sp5588-ch068192-sg0028</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/8/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090.wav" /><embed height="50" src="audio_demos/style_conversion/8/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/8/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090.wav" /><embed height="50" src="audio_demos/style_conversion/8/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/8/CLEAN_Lab41-SRI-VOiCES-src-sp5588-ch068192-sg0028.wav" /><embed height="50" src="audio_demos/style_conversion/8/CLEAN_Lab41-SRI-VOiCES-src-sp5588-ch068192-sg0028.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/8/SE_Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090.wav" /><embed height="50" src="audio_demos/style_conversion/8/SE_Lab41-SRI-VOiCES-rm2-none-sp5588-ch068192-sg0028-mc01-stu-clo-dg090.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060</td><td>Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060</td><td>Lab41-SRI-VOiCES-src-sp5139-ch061422-sg0023</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/9/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060.wav" /><embed height="50" src="audio_demos/style_conversion/9/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/9/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060.wav" /><embed height="50" src="audio_demos/style_conversion/9/NOISY_Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/9/CLEAN_Lab41-SRI-VOiCES-src-sp5139-ch061422-sg0023.wav" /><embed height="50" src="audio_demos/style_conversion/9/CLEAN_Lab41-SRI-VOiCES-src-sp5139-ch061422-sg0023.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/9/SE_Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060.wav" /><embed height="50" src="audio_demos/style_conversion/9/SE_Lab41-SRI-VOiCES-rm2-none-sp5139-ch061422-sg0023-mc01-stu-clo-dg060.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160</td><td>Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160</td><td>Lab41-SRI-VOiCES-src-sp5322-ch007680-sg0022</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/10/NOISY_Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160.wav" /><embed height="50" src="audio_demos/style_conversion/10/NOISY_Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/10/NOISY_Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160.wav" /><embed height="50" src="audio_demos/style_conversion/10/NOISY_Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/10/CLEAN_Lab41-SRI-VOiCES-src-sp5322-ch007680-sg0022.wav" /><embed height="50" src="audio_demos/style_conversion/10/CLEAN_Lab41-SRI-VOiCES-src-sp5322-ch007680-sg0022.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/10/SE_Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160.wav" /><embed height="50" src="audio_demos/style_conversion/10/SE_Lab41-SRI-VOiCES-rm1-none-sp5322-ch007680-sg0022-mc01-stu-clo-dg160.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100</td><td>Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100</td><td>Lab41-SRI-VOiCES-src-sp4267-ch287369-sg0016</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/11/NOISY_Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100.wav" /><embed height="50" src="audio_demos/style_conversion/11/NOISY_Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/11/NOISY_Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100.wav" /><embed height="50" src="audio_demos/style_conversion/11/NOISY_Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/11/CLEAN_Lab41-SRI-VOiCES-src-sp4267-ch287369-sg0016.wav" /><embed height="50" src="audio_demos/style_conversion/11/CLEAN_Lab41-SRI-VOiCES-src-sp4267-ch287369-sg0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/11/SE_Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100.wav" /><embed height="50" src="audio_demos/style_conversion/11/SE_Lab41-SRI-VOiCES-rm1-none-sp4267-ch287369-sg0016-mc01-stu-clo-dg100.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120</td><td>Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120</td><td>Lab41-SRI-VOiCES-src-sp3816-ch290923-sg0003</td><td>1089-134686-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/style_conversion/12/NOISY_Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120.wav" /><embed height="50" src="audio_demos/style_conversion/12/NOISY_Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/12/NOISY_Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120.wav" /><embed height="50" src="audio_demos/style_conversion/12/NOISY_Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/12/CLEAN_Lab41-SRI-VOiCES-src-sp3816-ch290923-sg0003.wav" /><embed height="50" src="audio_demos/style_conversion/12/CLEAN_Lab41-SRI-VOiCES-src-sp3816-ch290923-sg0003.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" /><embed height="50" src="audio_demos/style_conversion/target_style-1089-134686-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/style_conversion/12/SE_Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120.wav" /><embed height="50" src="audio_demos/style_conversion/12/SE_Lab41-SRI-VOiCES-rm1-none-sp3816-ch290923-sg0003-mc01-stu-clo-dg120.wav" width="100"></embed></audio></td>
+</tr>
+</table>
+
+
+    <h2>Change Style and Speaker</h2>
+    <p>The following demos change style and speaker embeddings simultaneously.<br>
+    Content utterances are from <strong>VOiCES_devkit test set</strong>.<br>
+    Style utterances and speaker utterances are from <strong>LibriSpeech test set</strong>.<br>
+    </p>
+
+<table border="3">
+  <tr><td></td><td>content utterance</td><td>speaker utterance</td><td>style utterance</td><td>conversion result</td></tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm2-none-sp3070-ch166423-sg0042-mc01-stu-clo-dg080</td><td>8455-210777-0044</td><td>8463-294828-0038</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/convert_all/1/source-Lab41-SRI-VOiCES-rm2-none-sp3070-ch166423-sg0042-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/convert_all/1/source-Lab41-SRI-VOiCES-rm2-none-sp3070-ch166423-sg0042-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/1/target_spk-8455-210777-0044.wav" /><embed height="50" src="audio_demos/convert_all/1/target_spk-8455-210777-0044.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/1/target_style-8463-294828-0038.wav" /><embed height="50" src="audio_demos/convert_all/1/target_style-8463-294828-0038.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/1/convert.wav" /><embed height="50" src="audio_demos/convert_all/1/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm3-none-sp6080-ch058025-sg0029-mc01-stu-clo-dg080</td><td>4446-2275-0025</td><td>8224-274384-0002</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/convert_all/2/source-Lab41-SRI-VOiCES-rm3-none-sp6080-ch058025-sg0029-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/convert_all/2/source-Lab41-SRI-VOiCES-rm3-none-sp6080-ch058025-sg0029-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/2/target_spk-4446-2275-0025.wav" /><embed height="50" src="audio_demos/convert_all/2/target_spk-4446-2275-0025.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/2/target_style-8224-274384-0002.wav" /><embed height="50" src="audio_demos/convert_all/2/target_style-8224-274384-0002.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/2/convert.wav" /><embed height="50" src="audio_demos/convert_all/2/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm1-none-sp5029-ch030593-sg0041-mc05-stu-far-dg140</td><td>5142-36377-0010</td><td>2830-3980-0063</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/convert_all/3/source-Lab41-SRI-VOiCES-rm1-none-sp5029-ch030593-sg0041-mc05-stu-far-dg140.wav" /><embed height="50" src="audio_demos/convert_all/3/source-Lab41-SRI-VOiCES-rm1-none-sp5029-ch030593-sg0041-mc05-stu-far-dg140.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/3/target_spk-5142-36377-0010.wav" /><embed height="50" src="audio_demos/convert_all/3/target_spk-5142-36377-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/3/target_style-2830-3980-0063.wav" /><embed height="50" src="audio_demos/convert_all/3/target_style-2830-3980-0063.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/3/convert.wav" /><embed height="50" src="audio_demos/convert_all/3/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm1-none-sp3070-ch166423-sg0042-mc01-stu-clo-dg080</td><td>2094-142345-0010</td><td>260-123288-0016</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/convert_all/4/source-Lab41-SRI-VOiCES-rm1-none-sp3070-ch166423-sg0042-mc01-stu-clo-dg080.wav" /><embed height="50" src="audio_demos/convert_all/4/source-Lab41-SRI-VOiCES-rm1-none-sp3070-ch166423-sg0042-mc01-stu-clo-dg080.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/4/target_spk-2094-142345-0010.wav" /><embed height="50" src="audio_demos/convert_all/4/target_spk-2094-142345-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/4/target_style-260-123288-0016.wav" /><embed height="50" src="audio_demos/convert_all/4/target_style-260-123288-0016.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/4/convert.wav" /><embed height="50" src="audio_demos/convert_all/3/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm2-none-sp1390-ch130494-sg0008-mc05-stu-far-dg180</td><td>5142-33396-0059</td><td>3570-5695-0007</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/convert_all/5/source-Lab41-SRI-VOiCES-rm2-none-sp1390-ch130494-sg0008-mc05-stu-far-dg180.wav" /><embed height="50" src="audio_demos/convert_all/5/source-Lab41-SRI-VOiCES-rm2-none-sp1390-ch130494-sg0008-mc05-stu-far-dg180.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/5/target_spk-5142-33396-0059.wav" /><embed height="50" src="audio_demos/convert_all/5/target_spk-5142-33396-0059.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/5/target_style-3570-5695-0007.wav" /><embed height="50" src="audio_demos/convert_all/5/target_style-3570-5695-0007.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/5/convert.wav" /><embed height="50" src="audio_demos/convert_all/5/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+<tr>
+  <td>label</td>
+	<td> Lab41-SRI-VOiCES-rm4-none-sp1898-ch145702-sg0001-mc01-stu-clo-dg100</td><td>61-70968-0040</td><td>237-134493-0010</td><td></td>
+</tr>
+<tr><td></td>
+<td><audio controls><source src="audio_demos/convert_all/6/source-Lab41-SRI-VOiCES-rm4-none-sp1898-ch145702-sg0001-mc01-stu-clo-dg100.wav" /><embed height="50" src="audio_demos/convert_all/6/source-Lab41-SRI-VOiCES-rm4-none-sp1898-ch145702-sg0001-mc01-stu-clo-dg100.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/6/target_spk-61-70968-0040.wav" /><embed height="50" src="audio_demos/convert_all/6/target_spk-61-70968-0040.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/6/target_style-237-134493-0010.wav" /><embed height="50" src="audio_demos/convert_all/6/target_style-237-134493-0010.wav" width="100"></embed></audio></td>
+<td><audio controls><source src="audio_demos/convert_all/6/convert.wav" /><embed height="50" src="audio_demos/convert_all/6/convert.wav" width="100"></embed></audio></td>
+</tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+<!--<h3>Citation</h3>-->
+<!--      <pre class="highlight">-->
+<!--@ARTICLE{2021arXiv211202418C,-->
+<!--  author = {{Casanova}, Edresson and {Weber}, Julian and {Shulby}, Christopher and {Junior}, Arnaldo Candido and {G{\"o}lge}, Eren and {Antonelli Ponti}, Moacir},-->
+<!--  title = "{YourTTS: Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone}",-->
+<!--  journal = {arXiv e-prints},-->
+<!--  keywords = {Computer Science - Sound, Computer Science - Computation and Language, Electrical Engineering and Systems Science - Audio and Speech Processing},-->
+<!--  year = 2021,-->
+<!--  month = dec,-->
+<!--  eid = {arXiv:2112.02418},-->
+<!--  pages = {arXiv:2112.02418},-->
+<!--  archivePrefix = {arXiv},-->
+<!--  eprint = {2112.02418},-->
+<!--  primaryClass = {cs.SD},-->
+<!--  adsurl = {https://ui.adsabs.harvard.edu/abs/2021arXiv211202418C},-->
+<!--  adsnote = {Provided by the SAO/NASA Astrophysics Data System}-->
+<!--}-->
+<!--      </pre>-->
+
+
+<!--      <footer class="site-footer">-->
+<!--        <a href="https://coqui.ai/" title="Coqui AI" target="_blank"> <img src="img/coqui.png" border="0" height="40"> </a>-->
+<!--        <a href="http://www.defined.ai/" title="Defined.ai" target="_blank"> <img src="img/df.jpeg" border="0" height="50"> </a>-->
+<!--        <a href="http://www.deeplearningbrasil.com.br/" title="Deep Learning Brasil" target="_blank"> <img src="img/dlb.png" border="0" height="50"> </a>-->
+<!--        <a href="http://icmc.usp.br/" title="Institute of Mathematics and Computer Science (ICMC)" target="_blank"> <img src="img/icmc.png" border="0" height="55"> </a>-->
+<!--        <a href="https://www.soprabanking.com/" title="Sopra Banking Software" target="_blank"> <img src="img/sbs.png" border="0" height="38"> </a>-->
+<!--        &lt;!&ndash;<a href="http://nilc.icmc.usp.br/" title="The Interinstitutional Center for Computational Linguistics(NILC)" target="_blank"> <img src="img/nilc.png" border="0" height="50"> </a>&ndash;&gt;-->
+<!--          <div class="cleaner"></div>-->
+<!--      </footer>-->
+<!--    <span class="site-footer-owner"><center></center></span>-->
+    </section>
+
+
+
+
+    <script src="js/animheader.js"></script>
+
+  </body>
 </html>
